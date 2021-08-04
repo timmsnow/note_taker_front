@@ -16,7 +16,7 @@ class Home extends Component {
   }
 
   getUsers = () => {
-    axios.get("http://localhost:3000/users").then((response) => {
+    axios.get("users").then((response) => {
       console.log(response.data);
       const users = response.data;
         this.setState({ users });
@@ -26,7 +26,7 @@ class Home extends Component {
   render() { 
     return ( 
     <div>
-    <h1>Notes!</h1>
+    <h1>users!</h1>
     <ul>
         { this.state.users.map(user => <li key={user.id}>{user.name}</li>)}
       </ul>

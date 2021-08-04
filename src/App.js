@@ -1,6 +1,7 @@
 import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "./components/home";
+import Notes from "./components/notes";
 import './App.css';
 import axios from 'axios';
 
@@ -23,8 +24,8 @@ const AppWithRouter = withRouter(App);
 const Main = () => (
 <Switch>
     <Route exact path="/" component={Home}></Route>
-    {/* <Route exact path="/login" component={Login}></Route>
-    <Route exact path="/dashboard" component={Dashboard}></Route>
+    <Route exact path="/notes" component={Notes}></Route>
+    {/* <Route exact path="/dashboard" component={Dashboard}></Route>
     <Route exact path="/logout" component={Logout}></Route>
     <Route exact path="/contacts" component={Contacts}></Route>
   <Route exact path="/about" component={About}></Route> */}
