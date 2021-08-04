@@ -24,7 +24,8 @@ class Home extends Component {
     <div>
     <h1>Notes!</h1>
     <ul>
-        { this.state.notes.map(note => <li key={note.id}>{note.title} {note.body}</li>)}
+        { this.state.notes.map(note => <li key={note.id}>{note.title}
+       {note.todos}</li>)}
       </ul>
     </div>
      );
