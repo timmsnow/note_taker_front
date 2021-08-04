@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import Home from "./components/home";
 import './App.css';
+import axios from 'axios';
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
     </div>
   );
 }
+
+axios.defaults.baseURL = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "/";
 
 const AppWithRouter = withRouter(App);
 
